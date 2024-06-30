@@ -13,6 +13,8 @@ app.use(express.json());
 
 app.use("/components", componentsRoutes);
 
+app.get("/", (req, res) => res.send("Welcome to the ms."));
+
 const port = process.env.PORT || 4000;
 
 mongoose
@@ -22,3 +24,5 @@ mongoose
 
         app.listen(port, () => console.log(`Server running on port ${port}...`));
     });
+
+module.exports = app;

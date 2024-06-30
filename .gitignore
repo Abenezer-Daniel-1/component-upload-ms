@@ -4,3 +4,4 @@ storage/*
 storage/!uploader.txt
 
 .env
+.vercel
