@@ -9,13 +9,14 @@ const getSignle = async (req, res) => {
 }
 
 const post = async (req, res) => {
-    if(!req.body.name || !req.body.type || !req.body.content.html)
+    if(!req.body.name || !req.body.type || !req.body.group || !req.body.content.html)
         return res.json("Fill out the necessary fields.");
 
     try {
         const data = {
             name: req.body.name,
             type: req.body.type,
+            group: req.body.group,
             content: {
                 html: req.body.content.html,
                 js: req.body.content.js && req.body.content.js

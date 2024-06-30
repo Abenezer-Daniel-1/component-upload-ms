@@ -11,6 +11,11 @@ const schema = new mongoose.Schema({
         enum: ["Element", "Page"],
         required: true
     },
+    group: {
+        type: String,
+        enum: ["Headers"],
+        required: true
+    },
     content: {
         html: {
             type: String,
