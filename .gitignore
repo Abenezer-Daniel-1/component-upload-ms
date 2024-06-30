@@ -2,3 +2,5 @@ node_modules/
 
 storage/*
 storage/!uploader.txt
+
+.env
