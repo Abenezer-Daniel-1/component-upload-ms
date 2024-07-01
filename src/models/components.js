@@ -8,12 +8,12 @@ const schema = new mongoose.Schema({
     },
     type: {
         type: String,
-        enum: ["Element", "Page"],
+        enum: ["Element", "Page", "Section"],
         required: true
     },
     group: {
         type: String,
-        enum: ["Headers"],
+        enum: ["Headers", "Heroes"],
         required: true
     },
     content: {
