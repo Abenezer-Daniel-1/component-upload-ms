@@ -13,7 +13,7 @@ const schema = new mongoose.Schema({
     },
     group: {
         type: String,
-        enum: ["Headers", "Heroes"],
+        enum: ["Headers", "Heroes", "Sidebars"],
         required: true
     },
     content: {
