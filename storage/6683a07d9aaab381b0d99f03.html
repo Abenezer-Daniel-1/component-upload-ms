@@ -10,40 +10,40 @@
     <div class="grid place-content-center h-screen px-6">
         <ul class="border border-gray-300 rounded-lg w-full sm:w-[420px] md:w-[724px]">
             <li class="px-6 py-4 border-b border-gray-300 overflow-hidden accordion-list-item cursor-pointer">
-                <div class="flex justify-between items-center gap-4 mb-4">
+                <div class="flex justify-between items-center gap-4">
                     <h4 class="text-sm sm:text-base font-bold">The first CSS library</h4>
                     <svg viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-2 sm:h-3 indicator transition">
                         <path d="M14 2L8 8L2 2" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-600 pl-4">The first widely recognized CSS library is Bootstrap, developed by Twitter in 2011. However, before Bootstrap, there were CSS frameworks and tools such as Blueprint CSS (released in 2007) and YUI (Yahoo! User Interface Library), which included a CSS framework component and was released in 2005. These early frameworks helped lay the groundwork for more advanced and popular libraries like Bootstrap.</p>
+                <p class=" transition-all overflow-hidden text-xs sm:text-sm text-gray-600 pl-4 mt-4">The first widely recognized CSS library is Bootstrap, developed by Twitter in 2011. However, before Bootstrap, there were CSS frameworks and tools such as Blueprint CSS (released in 2007) and YUI (Yahoo! User Interface Library), which included a CSS framework component and was released in 2005. These early frameworks helped lay the groundwork for more advanced and popular libraries like Bootstrap.</p>
             </li>
             <li class="px-6 py-4 border-b border-gray-300 overflow-hidden accordion-list-item cursor-pointer">
-                <div class="flex justify-between items-center gap-4 mb-4">
+                <div class="flex justify-between items-center gap-4">
                     <h4 class="text-sm sm:text-base font-bold">The first JS library</h4>
                     <svg viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-2 sm:h-3 indicator transition">
                         <path d="M14 2L8 8L2 2" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-600 pl-4">The first widely recognized JavaScript library is jQuery, which was released in 2006 by John Resig. jQuery significantly simplified client-side scripting of HTML and became extremely popular due to its ease of use and cross-browser compatibility. Before jQuery, there were other JavaScript libraries and frameworks, but none gained as much traction or widespread use. Another notable early library is Prototype, which was released in 2005 and influenced many subsequent JavaScript frameworks.</p>
+                <p class=" transition-all overflow-hidden text-xs sm:text-sm text-gray-600 pl-4 mt-4">The first widely recognized JavaScript library is jQuery, which was released in 2006 by John Resig. jQuery significantly simplified client-side scripting of HTML and became extremely popular due to its ease of use and cross-browser compatibility. Before jQuery, there were other JavaScript libraries and frameworks, but none gained as much traction or widespread use. Another notable early library is Prototype, which was released in 2005 and influenced many subsequent JavaScript frameworks.</p>
             </li>
             <li class="px-6 py-4 border-b border-gray-300 overflow-hidden accordion-list-item cursor-pointer">
-                <div class="flex justify-between items-center gap-4 mb-4">
+                <div class="flex justify-between items-center gap-4">
                     <h4 class="text-sm sm:text-base font-bold">The first React library</h4>
                     <svg viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-2 sm:h-3 indicator transition">
                         <path d="M14 2L8 8L2 2" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-600 pl-4">The first library created specifically for use with React is likely React Router. It was released in November 2014 by Ryan Florence and Michael Jackson. React Router is a standard library for routing in React applications, enabling navigation among views of various components, allowing deep linking, and handling location changes.</p>
+                <p class=" transition-all overflow-hidden text-xs sm:text-sm text-gray-600 pl-4 mt-4">The first library created specifically for use with React is likely React Router. It was released in November 2014 by Ryan Florence and Michael Jackson. React Router is a standard library for routing in React applications, enabling navigation among views of various components, allowing deep linking, and handling location changes.</p>
             </li>
             <li class="px-6 py-4 overflow-hidden accordion-list-item cursor-pointer">
-                <div class="flex justify-between items-center gap-4 mb-4">
+                <div class="flex justify-between items-center gap-4">
                     <h4 class="text-sm sm:text-base font-bold">The first Vue library</h4>
                     <svg viewBox="0 0 16 10" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-2 sm:h-3 indicator transition">
                         <path d="M14 2L8 8L2 2" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <p class="text-xs sm:text-sm text-gray-600 pl-4">The first library created specifically for use with Vue.js is likely Vue Router. Vue Router was developed by Evan You, the creator of Vue.js, and released in 2015 shortly after Vue.js itself, which was released in 2014. Vue Router provides a way to navigate between different views or components in a Vue.js application, making it essential for building single-page applications with Vue.</p>
+                <p class="transition-all overflow-hidden text-xs sm:text-sm text-gray-600 pl-4 mt-4">The first library created specifically for use with Vue.js is likely Vue Router. Vue Router was developed by Evan You, the creator of Vue.js, and released in 2015 shortly after Vue.js itself, which was released in 2014. Vue Router provides a way to navigate between different views or components in a Vue.js application, making it essential for building single-page applications with Vue.</p>
             </li>
         </ul>
     </div>
@@ -54,13 +54,13 @@
             const p = accordionListItem.querySelector("p");
             const indicator = accordionListItem.querySelector(".indicator");
 
-            p.style.display = "none";
-            p.style.opacity = "0";
+            p.style.maxHeight = "0px";
+            p.classList.remove("mt-4");
 
             accordionListItem.addEventListener("click", () => {
-                if(p.style.display === "none") {
-                    p.style.display = "block";
-                    p.style.opacity = "1";
+                if(p.style.maxHeight === "0px") {
+                    p.style.maxHeight = null;
+                    p.classList.add("mt-4");
                     indicator.style.transform = "rotate(180deg)";
 
                     accordionListItems.forEach((items, i) => {
@@ -68,14 +68,14 @@
                             const p = items.querySelector("p");
                             const indicator = items.querySelector(".indicator");
 
-                            p.style.display = "none";
-                            p.style.opacity = "0";
+                            p.style.maxHeight = "0px";
+                            p.classList.remove("mt-4");
                             indicator.style.transform = "rotate(0deg)";
                         }
                     })
                 } else {
-                    p.style.display = "none";
-                    p.style.opacity = "0";
+                    p.style.maxHeight = "0px";
+                    p.classList.remove("mt-4");
                     indicator.style.transform = "rotate(0deg)";
                 }
             });
